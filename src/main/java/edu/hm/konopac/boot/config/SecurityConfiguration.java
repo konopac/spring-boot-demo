@@ -33,7 +33,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/**").authenticated()										// all pages need to be authenticated
+			.antMatchers("/rest/hello/*").permitAll()								// "/rest/hello/*" is allowed for everyone
+			.anyRequest().authenticated()											// all other pages need to be authenticated
 			.and()
 			.formLogin().permitAll()												// login page is visible to everyone
 			.and()
@@ -45,13 +46,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			
 			@Override
 			public boolean matches(CharSequence chars, String s) {
-				return true;
+				return chars.toString().equals(s);
 			}
 			
 			@Override
 			public String encode(CharSequence chars) {
 				return chars.toString();
-				
 			}
 		};
 	}

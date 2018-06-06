@@ -1,16 +1,15 @@
 package edu.hm.konopac.boot.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RequestMapping("/rest/user")
+@RequestMapping("/rest/hello")
 @RestController
-public class UserController {
+public class HelloController {
 
-	@GetMapping("/hello")
-	public String index() {
+	@RequestMapping("/world")
+	public String hello() {
 		return "Hello World!";
 	}
 	

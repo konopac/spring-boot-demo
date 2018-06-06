@@ -25,10 +25,12 @@
 		</dependency>
 
 		<!-- Spring Data -->
+		<!-- disabled due to problems with non-existing database
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		-->
 
 		<!-- Spring Security -->
 		<dependency>

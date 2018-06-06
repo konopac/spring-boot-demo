@@ -2,20 +2,15 @@ package edu.hm.konopac.boot.entity;
 
 import java.util.Collection;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-@Entity
+// @Entity // enable, if spring data is active
 public class User implements UserDetails {
 	private static final long serialVersionUID = -3967564712617940623L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	// @Id // enable, if spring data is active
+	// @GeneratedValue(strategy=GenerationType.AUTO) // enable, if spring data is active
 	private Long id;
 	private String username;
 	private String password;

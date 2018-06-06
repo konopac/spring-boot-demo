@@ -1,15 +1,10 @@
 package edu.hm.konopac.boot.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
+// @Entity // enable, if spring data is active
 public class Movie {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	// @Id // enable, if spring data is active
+	// @GeneratedValue(strategy=GenerationType.AUTO) // enable, if spring data is active
 	private Long id;
 	private String title;
 	private String director;
